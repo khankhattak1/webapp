@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        .scrollable-textarea-1 {
+            position: center;
+            height: 200px;
+            overflow-y: scroll;
+        }
+       
+        .scrollable-textarea-2 {
+            position: center;
+            height: 200px;
+            overflow-y: scroll;
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            border-radius: 10px;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #37517e; 
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #37517e; 
+        }
+
+    </style>
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" type="text/css"  href="{{url_for('static',filename='css/style.css')}}" >
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+
+ 
+</head>
+<body>
+    <section id="find-hate" class="find-hate">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>HateSpeech Classified</h2>
+            <br>
+            <h4>Scrapped Textual Data</h4>
+            <div class="scrollable-textarea-1">
+                {{data}}
+            </div>
+          </div>
+          
+
+          <br><br><br>
+
+          <div class="section-title">
+            <h4>Speech Labels</h4>
+            <div class="scrollable-textarea-2">
+                {{new_data}}
+          </div>
+          </div>
+        </div>
+    </section>
+
+</body>
+</html>
